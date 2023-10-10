@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Anime;
+import com.example.demo.exception.BadRequestException;
+import com.example.demo.mapper.AnimeMapper;
 import com.example.demo.repository.AnimeRepository;
 import com.example.demo.request.AnimePostRequestBody;
 import com.example.demo.request.AnimePutRequestBody;
@@ -18,14 +20,17 @@ public class AnimeService {
     public List<Anime> listAll() {
         return animeRepository.findAll();
     }
+    public List<Anime> findByName(String name) {
+        return animeRepository.findByName(name);
+    }
 
     public Anime findByIdOrThrowBadRequestException(long id) {
         return animeRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, String.format("Anime %d not found", id)));
+                .orElseThrow(() -> new BadRequestException(String.format("Anime %d not found", id)));
     }
 
     public Anime save(AnimePostRequestBody animePostRequestBody) {
-        return animeRepository.save(Anime.builder().name(animePostRequestBody.getName()).build());
+        return animeRepository.save(AnimeMapper.INSTANCE.toAnime(animePostRequestBody));
     }
 
     public void delete(long id) {
@@ -34,10 +39,8 @@ public class AnimeService {
 
     public void replace(AnimePutRequestBody animePutRequestBody) {
         Anime savedAnime = this.findByIdOrThrowBadRequestException(animePutRequestBody.getId());
-        Anime replacementAnime = Anime.builder()
-                .id(savedAnime.getId())
-                .name(animePutRequestBody.getName())
-                .build();
+        Anime replacementAnime = AnimeMapper.INSTANCE.toAnime(animePutRequestBody);
+        replacementAnime.setId(savedAnime.getId());
         animeRepository.save(replacementAnime);
     }
 }
