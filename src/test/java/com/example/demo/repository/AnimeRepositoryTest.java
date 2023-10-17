@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
 import java.util.Optional;
+import com.example.demo.util.AnimeCreator;
 
 @DataJpaTest
 @DisplayName("Tests for Anime Repository")
@@ -17,9 +18,9 @@ class AnimeRepositoryTest {
     @Autowired
     private AnimeRepository animeRepository;
     @Test
-    @DisplayName("SAVE - Persists anime if successful")
+    @DisplayName("SAVE - It persists anime if successful")
     public void savePersistsAnimeIfSuccessful() {
-        Anime anime = this.createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
         Anime savedAnime = this.animeRepository.save(anime);
         Assertions.assertThat(savedAnime).isNotNull();
         Assertions.assertThat(savedAnime.getId()).isNotNull();
@@ -27,9 +28,9 @@ class AnimeRepositoryTest {
     }
 
     @Test
-    @DisplayName("SAVE - Updates anime if successful")
+    @DisplayName("SAVE - It updates anime if successful")
     public void saveUpdatesAnimeIfSuccessful() {
-        Anime anime = this.createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
         Anime savedAnime = this.animeRepository.save(anime);
         savedAnime.setName("Overlord");
         Anime updatedAnime = this.animeRepository.save(savedAnime);
@@ -38,18 +39,18 @@ class AnimeRepositoryTest {
         Assertions.assertThat(updatedAnime.getName()).isEqualTo(savedAnime.getName());
     }
     @Test
-    @DisplayName("DELETE - Removes anime if successful")
+    @DisplayName("DELETE - It removes anime if successful")
     public void deleteRemovesAnimeIfSuccessful() {
-        Anime anime = this.createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
         Anime savedAnime = this.animeRepository.save(anime);
         this.animeRepository.delete(savedAnime);
         Optional<Anime> optionalAnime = this.animeRepository.findById(savedAnime.getId());
         Assertions.assertThat(optionalAnime).isEmpty();
     }
     @Test
-    @DisplayName("GET - Finds anime by name if successful")
+    @DisplayName("GET - It finds anime by name if successful")
     public void getFindsAnimeByNameIfSuccessful() {
-        Anime anime = this.createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
         Anime savedAnime = this.animeRepository.save(anime);
         String name = savedAnime.getName();
         List<Anime> foundAnime = this.animeRepository.findByName(name);
@@ -58,14 +59,14 @@ class AnimeRepositoryTest {
                 .contains(savedAnime);
     }
     @Test
-    @DisplayName("GET - Returns an empty list if anime is not found")
+    @DisplayName("GET - It returns an empty list if anime is not found")
     public void getReturnsEmptyListIfAnimeIsNotFound() {
         List<Anime> foundAnime = this.animeRepository.findByName("nonexistent anime");
         Assertions.assertThat(foundAnime).isEmpty();
     }
 
     @Test
-    @DisplayName("SAVE - Throws ConstraintViolationException if name is empty")
+    @DisplayName("SAVE - It throws ConstraintViolationException if name is empty")
     public void saveThrowsConstraintViolationExceptionIfNameIsEmpty() {
         Anime anime = new Anime();
 //        Assertions.assertThatThrownBy(() -> this.animeRepository.save(anime))
@@ -75,7 +76,7 @@ class AnimeRepositoryTest {
                 .withMessageContaining("The anime name cannot be empty");
     }
 
-    private Anime createAnime() {
+    private Anime createAnimeToBeSaved() {
         return Anime.builder().name("Hajime no Ippo").build();
     }
 }

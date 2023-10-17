@@ -27,29 +27,29 @@ public class AnimeController {
 
     @GetMapping
     public ResponseEntity<Page<Anime>> list(Pageable pageable) {
-        log.info("GET list " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info("GET list " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.listAll(pageable));
     }
     @GetMapping(path = "/all")
     public ResponseEntity<List<Anime>> listAll() {
-        log.info("GET list " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info("GET list " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.listAllNonPageable());
     }
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<Anime> findById(@PathVariable long id) {
-        log.info("GET findById " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info("GET findById " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
     @GetMapping(path = "/find")
     public ResponseEntity<List<Anime>> findByName(@RequestParam String name) {
-        log.info("GET findByName " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info("GET findByName " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.findByName(name));
     }
 
     @PostMapping
     public ResponseEntity<Anime> save(@RequestBody @Valid AnimePostRequestBody animePostRequestBody) {
-        log.info("POST save " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info("POST save " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return new ResponseEntity<>(animeService.save(animePostRequestBody), HttpStatus.CREATED);
     }
 
