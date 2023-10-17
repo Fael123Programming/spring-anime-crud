@@ -1,9 +1,8 @@
-package com.example.demo.controller;
+package com.example.demo.service;
 
 import com.example.demo.domain.Anime;
-import com.example.demo.request.AnimePostRequestBody;
-import com.example.demo.request.AnimePutRequestBody;
-import com.example.demo.service.AnimeService;
+import com.example.demo.exception.BadRequestException;
+import com.example.demo.repository.AnimeRepository;
 import com.example.demo.util.AnimeCreator;
 import com.example.demo.util.AnimePostRequestBodyCreator;
 import com.example.demo.util.AnimePutRequestBodyCreator;
@@ -18,39 +17,38 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @ExtendWith(SpringExtension.class)
-class AnimeControllerTest {
+class AnimeServiceTest {
     @InjectMocks  // Use this if you want to test the class itself.
-    private AnimeController animeController;
+    private AnimeService animeService;
     @Mock  // Use this if you want to test every member of the class.
-    private AnimeService animeServiceMock;
+    private AnimeRepository animeRepositoryMock;
 
     @BeforeEach
     void setUp() {
         Anime validAnime = AnimeCreator.createValidAnime();
         List<Anime> animeList = List.of(validAnime);
         PageImpl<Anime> animePage = new PageImpl<>(animeList);
-        BDDMockito.when(animeServiceMock.listAll(ArgumentMatchers.any())).thenReturn(animePage);
-        BDDMockito.when(animeServiceMock.listAllNonPageable()).thenReturn(animeList);
-        BDDMockito.when(animeServiceMock.findByIdOrThrowBadRequestException(ArgumentMatchers.anyLong())).thenReturn(validAnime);
-        BDDMockito.when(animeServiceMock.findByName(ArgumentMatchers.anyString())).thenReturn(animeList);
-        BDDMockito.when(animeServiceMock.save(ArgumentMatchers.any(AnimePostRequestBody.class))).thenReturn(validAnime);
-        BDDMockito.doNothing().when(animeServiceMock).replace(ArgumentMatchers.any(AnimePutRequestBody.class));
-        BDDMockito.doNothing().when(animeServiceMock).delete(ArgumentMatchers.anyLong());
+        BDDMockito.when(animeRepositoryMock.findAll(ArgumentMatchers.any(PageRequest.class))).thenReturn(animePage);
+        BDDMockito.when(animeRepositoryMock.findAll()).thenReturn(animeList);
+        BDDMockito.when(animeRepositoryMock.findById(ArgumentMatchers.anyLong())).thenReturn(Optional.of(validAnime));
+        BDDMockito.when(animeRepositoryMock.findByName(ArgumentMatchers.anyString())).thenReturn(animeList);
+        BDDMockito.when(animeRepositoryMock.save(ArgumentMatchers.any(Anime.class))).thenReturn(validAnime);
+        BDDMockito.doNothing().when(animeRepositoryMock).delete(ArgumentMatchers.any(Anime.class));
     }
 
     @Test
     @DisplayName("GET - It returns a list of anime inside a page object if successful")
     void getReturnsListOfAnimeInsidePageObjectIfSuccessful() {
         String expectedName = AnimeCreator.createValidAnime().getName();
-        Page<Anime> animePage = animeController.list(null).getBody();
+        Page<Anime> animePage = animeService.listAll(PageRequest.of(1, 1));
         Assertions.assertThat(animePage).isNotNull();
         List<Anime> animeList = animePage.toList();
         Assertions.assertThat(animeList).isNotEmpty().hasSize(1);
@@ -61,7 +59,7 @@ class AnimeControllerTest {
     @DisplayName("GET - It returns a list of all anime if successful")
     void getReturnsListOfAllAnimeIfSuccessful() {
         String expectedName = AnimeCreator.createValidAnime().getName();
-        List<Anime> animeList = animeController.listAll().getBody();
+        List<Anime> animeList = animeService.listAllNonPageable();
         Assertions.assertThat(animeList).isNotNull().isNotEmpty().hasSize(1);
         Assertions.assertThat(animeList.get(0).getName()).isEqualTo(expectedName);
     }
@@ -70,15 +68,22 @@ class AnimeControllerTest {
     @DisplayName("GET - It tries to find an anime by id and returns it if successful")
     void getFindsAnimeByIdAndReturnsItIfSuccessful() {
         Long expectedId = AnimeCreator.createValidAnime().getId();
-        Anime anime = animeController.findById(1L).getBody();
+        Anime anime = animeService.findByIdOrThrowBadRequestException(1L);
         Assertions.assertThat(anime).isNotNull();
         Assertions.assertThat(anime.getId()).isNotNull().isEqualTo(expectedId);
+    }
+    @Test
+    @DisplayName("GET - It tries to find an anime by id and returns it if successful. Throws BadRequestException otherwise")
+    void getFindsAnimeByIdAndReturnsItIfSuccessfulThrowsBadRequestExceptionOtherwise() {
+        BDDMockito.when(animeRepositoryMock.findById(ArgumentMatchers.anyLong())).thenReturn(Optional.empty());
+        Assertions.assertThatExceptionOfType(BadRequestException.class)
+                .isThrownBy(() -> animeService.findByIdOrThrowBadRequestException(1L));
     }
     @Test
     @DisplayName("GET - It tries to find an anime by name and returns a list if successful")
     void getFindsAnimeByNameAndReturnsListIfSuccessful() {
         Anime expectedAnime = AnimeCreator.createValidAnime();
-        List<Anime> animeList = animeController.findByName("whatever").getBody();
+        List<Anime> animeList = animeService.findByName("whatever");
         Assertions.assertThat(animeList)
                 .isNotNull()
                 .isNotEmpty()
@@ -88,8 +93,8 @@ class AnimeControllerTest {
     @Test
     @DisplayName("GET - It tries to find an anime by name and returns an empty list if unsuccessful")
     void getFindsAnimeByNameAndReturnsEmptyListIfUnsuccessful() {
-        BDDMockito.when(animeServiceMock.findByName(ArgumentMatchers.anyString())).thenReturn(Collections.emptyList());
-        List<Anime> animeList = animeController.findByName("whatever").getBody();
+        BDDMockito.when(animeRepositoryMock.findByName(ArgumentMatchers.anyString())).thenReturn(Collections.emptyList());
+        List<Anime> animeList = animeService.findByName("whatever");
         Assertions.assertThat(animeList)
                 .isNotNull()
                 .isEmpty();
@@ -98,7 +103,7 @@ class AnimeControllerTest {
     @Test
     @DisplayName("POST - It saves the anime and returns it if successful")
     void postSavesAnimeAndReturnsItIfSuccessful() {
-        Assertions.assertThat(animeServiceMock.save(AnimePostRequestBodyCreator.createAnimePostRequestBody()))
+        Assertions.assertThat(animeService.save(AnimePostRequestBodyCreator.createAnimePostRequestBody()))
                 .isNotNull()
                 .isEqualTo(AnimeCreator.createValidAnime());
     }
@@ -106,19 +111,13 @@ class AnimeControllerTest {
     @Test
     @DisplayName("PUT - It updates an anime if it exists")
     void putUpdatesAnimeIfExists() {
-        Assertions.assertThatCode(() -> animeController.replace(AnimePutRequestBodyCreator.createAnimePutRequestBody()))
-                        .doesNotThrowAnyException();
-        ResponseEntity<Void> entity = animeController.replace(AnimePutRequestBodyCreator.createAnimePutRequestBody());
-        Assertions.assertThat(entity).isNotNull();
-        Assertions.assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        Assertions.assertThatCode(() -> animeService.replace(AnimePutRequestBodyCreator.createAnimePutRequestBody()))
+                .doesNotThrowAnyException();
     }
     @Test
     @DisplayName("DELETE - It deletes an anime if it exists")
     void delDeletesAnimeIfExists() {
-        Assertions.assertThatCode(() -> animeController.delete(1L))
-                        .doesNotThrowAnyException();
-        ResponseEntity<Void> entity = animeController.delete(1L);
-        Assertions.assertThat(entity).isNotNull();
-        Assertions.assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        Assertions.assertThatCode(() -> animeService.delete(1L))
+                .doesNotThrowAnyException();
     }
 }
