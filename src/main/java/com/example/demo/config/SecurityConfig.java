@@ -12,7 +12,6 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @EnableWebSecurity
 @Configuration
@@ -20,9 +19,14 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        // httpOnly should be false.
-        httpSecurity.csrf(AbstractHttpConfigurer::disable)
-        ;
+        httpSecurity
+                .authorizeHttpRequests((http) -> http
+                        .anyRequest()
+                        .authenticated())
+                .httpBasic(Customizer
+                        .withDefaults())
+                .csrf(AbstractHttpConfigurer::disable);
+        // In production, csrf token should never be disabled!!!
         return httpSecurity.build();
     }
 
