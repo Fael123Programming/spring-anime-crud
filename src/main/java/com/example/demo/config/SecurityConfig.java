@@ -37,6 +37,10 @@ public class SecurityConfig {
                 .password(encoder.encode("leafar"))
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user);
+        UserDetails admin = User.withUsername("admin")
+                .password(encoder.encode("admin"))
+                .roles("USER", "ADMIN")
+                .build();
+        return new InMemoryUserDetailsManager(user, admin);
     }
 }
