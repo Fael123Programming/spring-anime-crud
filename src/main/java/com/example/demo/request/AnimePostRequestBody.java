@@ -1,5 +1,6 @@
 package com.example.demo.request;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AnimePostRequestBody {
     @NotEmpty(message = "The anime name cannot be empty")
-//    @NotNull(message = "The anime name cannot be null")
+    @Schema(description = "This is the anime's name", example = "Dragon Ball Z")
     private String name;
 }
