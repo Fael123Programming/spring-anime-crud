@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo.service.AnimeServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-10-30T19:30:48" hostname="TROJAN" time="0.367">
+  <properties/>
+  <testcase name="POST - It saves the anime and returns it if successful" classname="com.example.demo.service.AnimeServiceTest" time="0.01"/>
+  <testcase name="DELETE - It deletes an anime if it exists" classname="com.example.demo.service.AnimeServiceTest" time="0.07"/>
+  <testcase name="GET - It tries to find an anime by id and returns it if successful" classname="com.example.demo.service.AnimeServiceTest" time="0.017"/>
+  <testcase name="PUT - It updates an anime if it exists" classname="com.example.demo.service.AnimeServiceTest" time="0.021"/>
+  <testcase name="GET - It tries to find an anime by name and returns a list if successful" classname="com.example.demo.service.AnimeServiceTest" time="0.013"/>
+  <testcase name="GET - It returns a list of anime inside a page object if successful" classname="com.example.demo.service.AnimeServiceTest" time="0.012"/>
+  <testcase name="GET - It tries to find an anime by name and returns an empty list if unsuccessful" classname="com.example.demo.service.AnimeServiceTest" time="0.018"/>
+  <testcase name="GET - It tries to find an anime by id and returns it if successful. Throws BadRequestException otherwise" classname="com.example.demo.service.AnimeServiceTest" time="0.034"/>
+  <testcase name="GET - It returns a list of all anime if successful" classname="com.example.demo.service.AnimeServiceTest" time="0.007"/>
+  <system-out><![CDATA[16:30:47.856 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.service.AnimeServiceTest]: AnimeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

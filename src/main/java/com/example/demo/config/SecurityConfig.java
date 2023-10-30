@@ -22,6 +22,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 @Configuration
@@ -35,10 +36,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeHttpRequests((http) -> http
+                        .requestMatchers(new AntPathRequestMatcher("/animes/admin/**")).hasRole("ADMIN")
+                        .requestMatchers(new AntPathRequestMatcher("/animes/**")).hasRole("USER")
                         .anyRequest()
-                        .authenticated())
-                .httpBasic(Customizer
-                        .withDefaults())
+                        .authenticated()
+
+                )
+                .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable);
         // In production, csrf token should never be disabled!!!

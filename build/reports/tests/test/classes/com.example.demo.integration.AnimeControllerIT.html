@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AnimeControllerIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AnimeControllerIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.demo.integration.html">com.example.demo.integration</a> &gt; AnimeControllerIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">20.692s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">DELETE - It deletes an existing anime if everything goes successful</td>
+<td class="success">deleteDeletesAnimeIfSuccessful()</td>
+<td class="success">1.738s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">DELETE - It returns 403 if user is not an admin</td>
+<td class="success">deleteReturns403IfUserIsNotAdmin()</td>
+<td class="success">2.799s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET - It tries to find an anime by id and returns it if found</td>
+<td class="success">getFindsAnimeByIdAndReturnsItIfFound()</td>
+<td class="success">4.812s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET - It tries to find an anime by name and returns an empty list if it is not found</td>
+<td class="success">getFindsAnimeByNameAndReturnsEmptyListIfNotFound()</td>
+<td class="success">1.864s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET - It tries to find an anime by name and returns a list if it is found</td>
+<td class="success">getFindsAnimeByNameAndReturnsListIfFound()</td>
+<td class="success">2.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET - It returns a list of anime if successful</td>
+<td class="success">getReturnsListOfAnimeIfSuccessful()</td>
+<td class="success">1.444s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET - It returns a list of anime inside a page object if successful</td>
+<td class="success">getReturnsListOfAnimeInsidePageObjectIfSuccessful()</td>
+<td class="success">2.417s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">POST - It creates a new anime if everything goes successful</td>
+<td class="success">postCreatesNewAnimeIfSuccessful()</td>
+<td class="success">1.640s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">PUT - It updates an existing anime if everything goes successful</td>
+<td class="success">putUpdatesAnimeIfSuccessful()</td>
+<td class="success">1.964s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:30:13.000 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SpringBoot1Application for test class com.example.demo.integration.AnimeControllerIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:13.843 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+16:30:13.965 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:13.967 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:15.671 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:15.815 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 2 JPA repository interfaces.
+16:30:16.044 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:17.476 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:17.497 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-1&quot;]
+16:30:17.540 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:17.541 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:17.809 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:17.812 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3753 ms
+16:30:18.001 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:b2caa9c2-54cd-4492-8d84-fbcd671c6344;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:18.699 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:18.847 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.9.Final
+16:30:18.853 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+16:30:19.232 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:19.645 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:20.327 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:21.624 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:21.698 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:21.709 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:21.713 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:22.863 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:23.276 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6259d7a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@374712f8, org.springframework.security.web.context.SecurityContextHolderFilter@3a3375d8, org.springframework.security.web.header.HeaderWriterFilter@63075ad1, org.springframework.security.web.authentication.logout.LogoutFilter@3119fcad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63e54c66, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@770be0d0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@33aa4326, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@29897daf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38e100ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@318f47f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@125ed27, org.springframework.security.web.access.ExceptionTranslationFilter@3b32f0b4, org.springframework.security.web.access.intercept.AuthorizationFilter@54b313d6]
+16:30:24.225 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-1&quot;]
+16:30:24.250 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55728 (http) with context path ''
+16:30:24.267 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 10.917 seconds (process running for 13.968)
+16:30:24.375 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-1&quot;]
+16:30:24.376 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:24.396 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-1&quot;]
+16:30:24.400 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-1&quot;]
+16:30:24.404 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:24.600 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:24.601 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:25.236 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:25.303 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+16:30:25.378 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:25.628 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:25.630 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-2&quot;]
+16:30:25.631 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:25.633 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:25.683 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:25.683 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1075 ms
+16:30:25.715 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:f85aaa79-9d37-4e12-baa0-61a53892457b;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:25.762 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:25.787 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:25.787 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:25.812 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:25.909 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:25.913 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:25.918 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:25.926 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:26.277 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:26.333 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@fc9313d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f0b32c0, org.springframework.security.web.context.SecurityContextHolderFilter@372153eb, org.springframework.security.web.header.HeaderWriterFilter@5d6d6533, org.springframework.security.web.authentication.logout.LogoutFilter@4b3ea082, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c5eb88c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@24a5ddd7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c152246, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@425a3af5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42e20500, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12d76643, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65067d90, org.springframework.security.web.access.ExceptionTranslationFilter@5c519681, org.springframework.security.web.access.intercept.AuthorizationFilter@68330024]
+16:30:26.624 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-2&quot;]
+16:30:26.629 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55730 (http) with context path ''
+16:30:26.635 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 2.222 seconds (process running for 16.336)
+16:30:27.982 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:28.063 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:28.326 [http-nio-auto-2-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:28.326 [http-nio-auto-2-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:28.328 [http-nio-auto-2-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:28.750 [http-nio-auto-2-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:28.930 [http-nio-auto-2-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 where a1_0.id=?
+16:30:29.173 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-2&quot;]
+16:30:29.177 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:29.179 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:29.190 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-2&quot;]
+16:30:29.194 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-2&quot;]
+16:30:29.197 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:29.480 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:29.480 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:30.101 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:30.136 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+16:30:30.190 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:30.298 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:30.299 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-3&quot;]
+16:30:30.300 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:30.301 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:30.390 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:30.391 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 894 ms
+16:30:30.420 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:c2e0c580-dc05-47cc-8092-945dee6809fa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:30.478 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:30.504 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:30.504 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:30.527 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:30.681 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:30.684 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:30.686 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:30.691 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:30.856 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:30.910 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22027e62, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d652bc6, org.springframework.security.web.context.SecurityContextHolderFilter@65314e4, org.springframework.security.web.header.HeaderWriterFilter@442612a6, org.springframework.security.web.authentication.logout.LogoutFilter@a72bb34, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4caeeab6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@db372b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4cf93f80, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@539a50ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a93c88a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@741cb82c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77b987f3, org.springframework.security.web.access.ExceptionTranslationFilter@4b76a0f4, org.springframework.security.web.access.intercept.AuthorizationFilter@4285b1bd]
+16:30:31.166 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-3&quot;]
+16:30:31.173 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55734 (http) with context path ''
+16:30:31.179 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.974 seconds (process running for 20.88)
+16:30:31.199 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:31.210 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:31.215 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:31.259 [http-nio-auto-3-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:31.259 [http-nio-auto-3-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:31.261 [http-nio-auto-3-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:30:31.375 [http-nio-auto-3-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:31.507 [http-nio-auto-3-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 offset ? rows fetch first ? rows only
+16:30:31.589 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-3&quot;]
+16:30:31.589 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:31.591 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:31.593 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-3&quot;]
+16:30:31.595 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-3&quot;]
+16:30:31.597 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:31.728 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:31.729 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:32.329 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:32.373 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+16:30:32.472 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:32.649 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:32.652 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-4&quot;]
+16:30:32.653 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:32.654 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:32.724 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:32.724 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 987 ms
+16:30:32.766 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:bff6b866-cf36-4e92-b8a7-7b37f26b24a9;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:32.814 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:32.843 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:32.844 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:32.866 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:33.055 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:33.069 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:33.085 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:33.092 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:33.643 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:33.687 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c0b0090, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@223c1a82, org.springframework.security.web.context.SecurityContextHolderFilter@67620d80, org.springframework.security.web.header.HeaderWriterFilter@3316aef6, org.springframework.security.web.authentication.logout.LogoutFilter@178cf671, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@28728558, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6145981c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@144d064a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58bdcf40, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c63aa5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67a2fb00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@282919de, org.springframework.security.web.access.ExceptionTranslationFilter@63fa0b9, org.springframework.security.web.access.intercept.AuthorizationFilter@2ace94ff]
+16:30:33.950 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-4&quot;]
+16:30:33.970 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55737 (http) with context path ''
+16:30:33.977 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 2.375 seconds (process running for 23.678)
+16:30:34.004 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:34.013 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:34.015 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:34.026 [http-nio-auto-4-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:34.026 [http-nio-auto-4-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:34.028 [http-nio-auto-4-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:30:34.199 [http-nio-auto-4-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:34.388 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-4&quot;]
+16:30:34.389 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:34.390 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:34.392 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-4&quot;]
+16:30:34.394 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-4&quot;]
+16:30:34.396 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:34.502 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:34.503 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:34.891 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:34.937 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+16:30:34.986 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:35.117 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:35.119 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-5&quot;]
+16:30:35.120 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:35.120 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:35.175 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:35.175 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 667 ms
+16:30:35.200 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:7f79d22c-9291-4895-aaf9-21ed6aae61a5;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:35.240 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:35.263 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:35.264 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:35.292 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:35.379 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:35.388 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:35.390 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:35.395 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:35.675 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:35.736 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ee0a533, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4bec8704, org.springframework.security.web.context.SecurityContextHolderFilter@7a54fc29, org.springframework.security.web.header.HeaderWriterFilter@29cd3f9f, org.springframework.security.web.authentication.logout.LogoutFilter@5d2e6b31, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@330fff8e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3e759542, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@65d3d7d7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1dd678e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fc4292a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e846cca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@296ca76c, org.springframework.security.web.access.ExceptionTranslationFilter@35da9f7f, org.springframework.security.web.access.intercept.AuthorizationFilter@125ce4b7]
+16:30:35.984 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-5&quot;]
+16:30:35.995 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55740 (http) with context path ''
+16:30:36.000 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.599 seconds (process running for 25.7)
+16:30:36.018 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:36.025 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:36.028 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:36.046 [http-nio-auto-5-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:36.046 [http-nio-auto-5-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:36.048 [http-nio-auto-5-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:36.178 [http-nio-auto-5-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:36.307 [http-nio-auto-5-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 where a1_0.id=?
+16:30:36.327 [http-nio-auto-5-exec-1] DEBUG org.hibernate.SQL - update anime set name=? where id=?
+16:30:36.353 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-5&quot;]
+16:30:36.354 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:36.355 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:36.357 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-5&quot;]
+16:30:36.359 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-5&quot;]
+16:30:36.360 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:36.409 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:36.410 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:36.827 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:36.858 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+16:30:36.911 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:37.001 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:37.003 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-6&quot;]
+16:30:37.007 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:37.007 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:37.091 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:37.091 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 675 ms
+16:30:37.114 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:6b76d2f5-41a9-4fa4-a272-a199eb126efa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:37.200 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:37.234 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:37.235 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:37.269 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:37.366 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:37.369 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:37.370 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:37.374 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:37.625 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:37.665 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c2bcea8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1af74f3f, org.springframework.security.web.context.SecurityContextHolderFilter@4396910, org.springframework.security.web.header.HeaderWriterFilter@7b4b2dcd, org.springframework.security.web.authentication.logout.LogoutFilter@3b60f14c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a9bd6c7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@46ab3c70, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@713f5a17, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6cdadc3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@445ec339, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@642c407d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15769719, org.springframework.security.web.access.ExceptionTranslationFilter@779af906, org.springframework.security.web.access.intercept.AuthorizationFilter@229e9280]
+16:30:37.904 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-6&quot;]
+16:30:37.911 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55744 (http) with context path ''
+16:30:37.936 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.57 seconds (process running for 27.636)
+16:30:37.987 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:38.005 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:38.008 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:38.033 [http-nio-auto-6-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:38.034 [http-nio-auto-6-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:38.035 [http-nio-auto-6-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:38.179 [http-nio-auto-6-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:38.342 [http-nio-auto-6-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 where a1_0.name=?
+16:30:38.369 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-6&quot;]
+16:30:38.370 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:38.370 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:38.372 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-6&quot;]
+16:30:38.374 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-6&quot;]
+16:30:38.375 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:38.451 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:38.451 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:38.855 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:38.888 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+16:30:38.936 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:39.018 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:39.019 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-7&quot;]
+16:30:39.020 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:39.020 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:39.088 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:39.088 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 630 ms
+16:30:39.109 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:c66d7948-1f8f-43b3-b531-2c6ed1176cd9;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:39.190 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:39.220 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:39.222 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:39.245 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:39.325 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:39.328 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:39.329 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:39.332 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:39.507 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:39.582 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@427b8fe4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56510bb2, org.springframework.security.web.context.SecurityContextHolderFilter@7f57925d, org.springframework.security.web.header.HeaderWriterFilter@19a13874, org.springframework.security.web.authentication.logout.LogoutFilter@48f359e4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2631075f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a4cf2d1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58e22835, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@745f4c49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c3fb4e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a3e0f7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7647d789, org.springframework.security.web.access.ExceptionTranslationFilter@2bd9b7cc, org.springframework.security.web.access.intercept.AuthorizationFilter@4feb7abb]
+16:30:39.846 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-7&quot;]
+16:30:39.851 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55748 (http) with context path ''
+16:30:39.856 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.477 seconds (process running for 29.557)
+16:30:39.880 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:39.886 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:39.889 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:39.899 [http-nio-auto-7-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:39.900 [http-nio-auto-7-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:39.901 [http-nio-auto-7-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:40.044 [http-nio-auto-7-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:40.206 [http-nio-auto-7-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 where a1_0.name=?
+16:30:40.239 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-7&quot;]
+16:30:40.240 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:40.240 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:40.243 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-7&quot;]
+16:30:40.245 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-7&quot;]
+16:30:40.246 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:40.291 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:40.291 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:40.653 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:40.682 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+16:30:40.725 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:40.813 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:40.818 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-8&quot;]
+16:30:40.819 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:40.819 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:40.863 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:40.864 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 569 ms
+16:30:40.891 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:21661cfc-b350-460c-b58d-cb8df6120e4d;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:40.927 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:40.968 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:40.968 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:41.017 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:41.155 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:41.157 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:41.159 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:41.162 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:41.309 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:41.353 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@464de3f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2639ec96, org.springframework.security.web.context.SecurityContextHolderFilter@108f206f, org.springframework.security.web.header.HeaderWriterFilter@4fa8389b, org.springframework.security.web.authentication.logout.LogoutFilter@30c716ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42e0f71e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5b2f8813, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@236a7f65, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4a99f9e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f4ba89e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@554d0ec1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66f73411, org.springframework.security.web.access.ExceptionTranslationFilter@ac00987, org.springframework.security.web.access.intercept.AuthorizationFilter@2a8953aa]
+16:30:41.541 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-8&quot;]
+16:30:41.551 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55751 (http) with context path ''
+16:30:41.568 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.319 seconds (process running for 31.269)
+16:30:41.586 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:41.590 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:41.597 [http-nio-auto-8-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:41.597 [http-nio-auto-8-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:41.599 [http-nio-auto-8-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:41.708 [http-nio-auto-8-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:41.849 [http-nio-auto-8-exec-1] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:41.886 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-8&quot;]
+16:30:41.887 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:41.887 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:41.891 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-8&quot;]
+16:30:41.894 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-8&quot;]
+16:30:41.895 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:41.931 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:41.931 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:42.347 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:42.387 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+16:30:42.455 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:42.589 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:42.590 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-9&quot;]
+16:30:42.591 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:42.592 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:42.646 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:42.647 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 711 ms
+16:30:42.678 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:1f2019ea-b09f-41f5-a271-6f96761b98ed;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:42.712 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:42.736 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:42.737 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:42.785 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:42.935 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:42.938 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:42.940 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:42.943 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:43.056 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:43.090 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@152e530d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c51515f, org.springframework.security.web.context.SecurityContextHolderFilter@1ce4f3ac, org.springframework.security.web.header.HeaderWriterFilter@1cdf48b9, org.springframework.security.web.authentication.logout.LogoutFilter@4a57cec1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7469445d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5ad755c5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@39122753, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@bca34d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1497efcc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3cab5869, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e7c780, org.springframework.security.web.access.ExceptionTranslationFilter@4c1c9116, org.springframework.security.web.access.intercept.AuthorizationFilter@4c40aed1]
+16:30:43.296 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-9&quot;]
+16:30:43.305 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55754 (http) with context path ''
+16:30:43.308 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.411 seconds (process running for 33.009)
+16:30:43.324 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:43.328 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:43.334 [http-nio-auto-9-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:43.334 [http-nio-auto-9-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:43.336 [http-nio-auto-9-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:30:43.447 [http-nio-auto-9-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:43.560 [http-nio-auto-9-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0 where a1_0.id=?
+16:30:43.583 [http-nio-auto-9-exec-1] DEBUG org.hibernate.SQL - delete from anime where id=?
+16:30:43.625 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler [&quot;http-nio-auto-9&quot;]
+16:30:43.626 [Test worker] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:30:43.626 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:30:43.629 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler [&quot;http-nio-auto-9&quot;]
+16:30:43.631 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler [&quot;http-nio-auto-9&quot;]
+16:30:43.633 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+16:30:43.678 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Starting AnimeControllerIT using Java 17.0.7 with PID 2080 (started by Rafae in C:\Users\Rafae\OneDrive\Documentos\dev\springboot\spring-anime-crud)
+16:30:43.679 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - No active profile set, falling back to 1 default profile: &quot;default&quot;
+16:30:43.965 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:30:44.017 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+16:30:44.079 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16:30:44.186 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+16:30:44.187 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-auto-10&quot;]
+16:30:44.188 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:44.188 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:30:44.256 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:30:44.257 [Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 574 ms
+16:30:44.292 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:6f405766-21c6-4c80-af8a-d1932fdda901;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16:30:44.333 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:44.354 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:44.356 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:30:44.377 [Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+16:30:44.437 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:44.440 [Test worker] DEBUG org.hibernate.SQL - create table anime (id bigint generated by default as identity, name varchar(255), primary key (id))
+16:30:44.444 [Test worker] DEBUG org.hibernate.SQL - create table sys_user (id bigint generated by default as identity, authorities varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id))
+16:30:44.449 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:30:44.605 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:30:44.638 [Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7595dfad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2eb20fa7, org.springframework.security.web.context.SecurityContextHolderFilter@5a9d5e2, org.springframework.security.web.header.HeaderWriterFilter@32a4284d, org.springframework.security.web.authentication.logout.LogoutFilter@69e7241, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4bd694d9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1ae73d9e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f75d11b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3eafe537, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7114def7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9129ab1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10faf070, org.springframework.security.web.access.ExceptionTranslationFilter@1ddcb450, org.springframework.security.web.access.intercept.AuthorizationFilter@38ec721a]
+16:30:44.788 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-auto-10&quot;]
+16:30:44.792 [Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 55757 (http) with context path ''
+16:30:44.795 [Test worker] INFO  c.e.d.integration.AnimeControllerIT - Started AnimeControllerIT in 1.159 seconds (process running for 34.496)
+16:30:44.808 [Test worker] DEBUG org.hibernate.SQL - insert into anime (name,id) values (?,default)
+16:30:44.812 [Test worker] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.id=?
+16:30:44.815 [Test worker] DEBUG org.hibernate.SQL - insert into sys_user (authorities,name,password,username,id) values (?,?,?,?,default)
+16:30:44.821 [http-nio-auto-10-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:44.821 [http-nio-auto-10-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:30:44.822 [http-nio-auto-10-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:30:44.926 [http-nio-auto-10-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.authorities,s1_0.name,s1_0.password,s1_0.username from sys_user s1_0 where s1_0.username=?
+16:30:45.041 [http-nio-auto-10-exec-1] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.name from anime a1_0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at Oct 30, 2023, 4:30:49 PM</p>
+</div>
+</div>
+</body>
+</html>

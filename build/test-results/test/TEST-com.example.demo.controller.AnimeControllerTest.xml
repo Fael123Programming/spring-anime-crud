@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo.controller.AnimeControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-10-30T19:30:45" hostname="TROJAN" time="0.415">
+  <properties/>
+  <testcase name="POST - It saves the anime and returns it if successful" classname="com.example.demo.controller.AnimeControllerTest" time="0.246"/>
+  <testcase name="DELETE - It deletes an anime if it exists" classname="com.example.demo.controller.AnimeControllerTest" time="0.019"/>
+  <testcase name="GET - It tries to find an anime by id and returns it if successful" classname="com.example.demo.controller.AnimeControllerTest" time="0.011"/>
+  <testcase name="PUT - It updates an anime if it exists" classname="com.example.demo.controller.AnimeControllerTest" time="0.019"/>
+  <testcase name="GET - It tries to find an anime by name and returns a list if successful" classname="com.example.demo.controller.AnimeControllerTest" time="0.012"/>
+  <testcase name="GET - It returns a list of anime inside a page object if successful" classname="com.example.demo.controller.AnimeControllerTest" time="0.013"/>
+  <testcase name="GET - It tries to find an anime by name and returns an empty list if unsuccessful" classname="com.example.demo.controller.AnimeControllerTest" time="0.014"/>
+  <testcase name="GET - It returns a list of all anime if successful" classname="com.example.demo.controller.AnimeControllerTest" time="0.014"/>
+  <system-out><![CDATA[16:30:45.077 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.controller.AnimeControllerTest]: AnimeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -46,15 +46,15 @@ public class AnimeController {
         return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
 
-    @GetMapping(path = "by-id/{id}")
-    public ResponseEntity<Anime> findByIdAuthenticationPrincipal(
-            @PathVariable long id,
-            @AuthenticationPrincipal UserDetails userDetails
-            ) {
-//        log.info("GET findById " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-        log.info(userDetails);
-        return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
-    }
+//    @GetMapping(path = "by-id/{id}")
+//    public ResponseEntity<Anime> findByIdAuthenticationPrincipal(
+//            @PathVariable long id,
+//            @AuthenticationPrincipal UserDetails userDetails
+//            ) {
+////        log.info("GET findById " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        log.info(userDetails);
+//        return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
+//    }
 
     @GetMapping(path = "/find")
     public ResponseEntity<List<Anime>> findByName(@RequestParam String name) {
@@ -63,19 +63,21 @@ public class AnimeController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Anime> save(@RequestBody @Valid AnimePostRequestBody animePostRequestBody) {
 //        log.info("POST save " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return new ResponseEntity<>(animeService.save(animePostRequestBody), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "/admin/{id}")
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Void> delete(@PathVariable long id) {
         animeService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Void> replace(@RequestBody AnimePutRequestBody animePutRequestBody) {
         animeService.replace(animePutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
