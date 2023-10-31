@@ -38,9 +38,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests((http) -> http
                         .requestMatchers(new AntPathRequestMatcher("/animes/admin/**")).hasRole("ADMIN")
                         .requestMatchers(new AntPathRequestMatcher("/animes/**")).hasRole("USER")
+                        .requestMatchers(new AntPathRequestMatcher("/actuator/**")).permitAll()
                         .anyRequest()
                         .authenticated()
-
                 )
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults())

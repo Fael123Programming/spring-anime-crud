@@ -17,3 +17,15 @@ logging:
     org:
       hibernate:
         SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+#        include: "*"
+        include: info, health, metrics, prometheus
+
+info:
+  app: Spring Anime CRUD
+  website: https://anime.crud
+  github: https://github.com/Fael123Programming/spring-anime-crud
