@@ -3,6 +3,8 @@ server:
     include-stacktrace: never
 
 spring:
+  application:
+    name: anime-crud
   datasource:
     # url: jdbc:mysql://localhost:3306/anime?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
     url: jdbc:mysql://localhost:3306/anime?createDatabaseIfNotExist=true
@@ -24,6 +26,9 @@ management:
       exposure:
 #        include: "*"
         include: info, health, metrics, prometheus
+  metrics:
+    tags:
+      application: anime-crud
 
 info:
   app: Spring Anime CRUD
